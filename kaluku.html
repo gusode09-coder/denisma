@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <div class="bg">
+        <div class="judul">calculator</div>
+        <div class="hasil">
+            <input type="text" disabled id="hasil">
+        </div>
+
+        <div class="tombol">
+            <div class="baris"> 
+                <button type="value" class="btn" onclick="tambahkaninput(1)">1</button>
+                <button type="value" class="btn" onclick="tambahkaninput(2)">2</button>
+                <button type="value" class="btn"  onclick="tambahkaninput(3)">3</button>
+                <button type="value" class="btn" onclick="tambahkaninput('/')">/</button>
+            </div>
+            <div class="baris"> 
+                <button type="value" class="btn" onclick="tambahkaninput(4)">4</button>
+                <button type="value" class="btn" onclick="tambahkaninput(5)">5</button>
+                <button type="value" class="btn" onclick="tambahkaninput(6)">6</button>
+                <button type="value" class="btn" onclick="tambahkaninput('*')">*</button>
+            </div>
+            <div class="baris"> 
+                <button type="value" class="btn" onclick="tambahkaninput(7)">7</button>
+                <button type="value" class="btn" onclick="tambahkaninput(8)">8</button>
+                <button type="value" class="btn" onclick="tambahkaninput(9)">9</button>
+                <button type="value" class="btn" onclick="tambahkaninput('-')">-</button>
+            </div>
+            <div class="baris"> 
+                <button type="value" class="btn" onclick="bersihinvalue()">C</button>
+                <button type="value" class="btn" onclick="tambahkaninput(0)">0</button>
+                <button type="value" class="btn" onclick="hasilvalue()">=</button>
+                <button type="value" class="btn" onclick="tambahkaninput('+')">+</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const hasil = document.getElementById('hasil');
+
+        function tambahkaninput(value) {
+        hasil.value += value;
+        }
+
+        function bersihinvalue(value) {
+            hasil.value = ""
+        }
+
+        function hasilvalue(){
+          
+            hasil.value = eval(hasil.value)
+            
+        }
+    </script>
+</body>
+
+</html>
